@@ -9,13 +9,14 @@ vite 8, vitest 2 beside 4. Two of those were held back by a real reason
 (`vite-node` in a Python harness) and the other two by nobody looking. This
 package is the "nobody looking" half: an app that extends it has whatever
 version this package declares, and Renovate moves the version *here*, once,
-as a `fix(deps):` that ships as a patch and reaches every app through the
-family's shared-packages rule.
+as a `fix(deps):` that is tagged as a patch and reaches every app through the
+family's shared-packages rule - a `github:` pin, like every package in the
+family; there is no registry.
 
 ## Use
 
 ```
-npm install -D @lautstark/toolchain
+npm install -D github:Lautstark/toolchain#v1.0.0
 ```
 
 and drop `vite`, `vitest`, `typescript` and `@playwright/test` from your own

@@ -50,10 +50,6 @@
   "engines": {
     "node": ">=22.18"
   },
-  "publishConfig": {
-    "access": "public",
-    "provenance": true
-  },
   "devDependencies": {
     "@semantic-release/changelog": "^7.0.0",
     "@semantic-release/git": "^11.0.1",
