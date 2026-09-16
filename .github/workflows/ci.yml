@@ -1,0 +1,22 @@
+name: CI
+
+on:
+  push:
+    branches: [main, 'renovate/**']
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      # The two shared configs type-check against the packages they wrap.
+      - run: npm run typecheck
+      # And run under the vitest this package declares, which is the point.
+      - run: npm test

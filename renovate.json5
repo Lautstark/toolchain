@@ -1,0 +1,15 @@
+// Renovate, for this repository.
+//
+// This is the one repository where the toolchain group in the shared preset
+// does its real work: vite, vitest, typescript and @playwright/test are
+// *dependencies* here, and a bump of one arrives as fix(deps):, ships as a
+// patch of @lautstark/toolchain, and reaches every app through the shared
+// packages rule - one branch per app, merged when that app's tests pass.
+//
+// The .json5 is spelled out on purpose: the //path/to/file syntax implies a
+// .json extension, so omitting it looks for a file that is not there and
+// Renovate stops before it does anything.
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  extends: ["github>Lautstark/.github//renovate-shared.json5"],
+}

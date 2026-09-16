@@ -1,0 +1,64 @@
+{
+  "name": "@lautstark/toolchain",
+  "version": "0.0.0-development",
+  "type": "module",
+  "description": "The versions of vite, vitest, typescript and playwright the Lautstark apps build and test with, and the configuration they share - declared once, so the apps cannot drift apart.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lautstark/toolchain.git"
+  },
+  "keywords": [
+    "aac",
+    "toolchain",
+    "vite",
+    "vitest",
+    "playwright"
+  ],
+  "sideEffects": false,
+  "exports": {
+    "./tsconfig.json": "./tsconfig.json",
+    "./vitest": {
+      "types": "./vitest.d.ts",
+      "default": "./vitest.js"
+    },
+    "./playwright": {
+      "types": "./playwright.d.ts",
+      "default": "./playwright.js"
+    }
+  },
+  "files": [
+    "tsconfig.json",
+    "vitest.js",
+    "vitest.d.ts",
+    "playwright.js",
+    "playwright.d.ts",
+    "CHANGELOG.md",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.check.json"
+  },
+  "dependencies": {
+    "@playwright/test": "^1.63.0",
+    "typescript": "^5.9.3",
+    "vite": "^8.3.0",
+    "vitest": "^4.1.11"
+  },
+  "engines": {
+    "node": ">=22.18"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^7.0.0",
+    "@semantic-release/git": "^11.0.1",
+    "@types/node": "^22.20.3",
+    "conventional-changelog-conventionalcommits": "^10.4.0",
+    "semantic-release": "^25.0.9"
+  }
+}
