@@ -1,8 +1,7 @@
 # Releasing
 
 The same flow as every package in the family — `@lautstark/sicherung`'s
-RELEASING.md has it in full (the account setup it mentions is history: the
-family stayed on git). On a push to `main`, `.github/workflows/release.yml`
+RELEASING.md has it in full. On a push to `main`, `.github/workflows/release.yml`
 runs the gate and semantic-release decides from the commit subjects: `fix:`
 (including a Renovate `fix(deps):` bump of one of the four dependencies) is a
 patch, `feat:` a minor, `feat!:` a major. There is no build, no registry and
