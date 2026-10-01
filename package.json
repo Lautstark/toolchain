@@ -1,6 +1,6 @@
 {
   "name": "@lautstark/toolchain",
-  "version": "4.0.0",
+  "version": "4.1.0",
   "type": "module",
   "description": "The versions of vite, vitest, typescript and playwright the Lautstark apps build and test with, and the configuration they share - declared once, so the apps cannot drift apart.",
   "license": "MIT",

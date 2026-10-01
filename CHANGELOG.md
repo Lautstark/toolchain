@@ -1,3 +1,9 @@
+## [4.1.0](https://github.com/Lautstark/toolchain/compare/v4.0.0...v4.1.0) (2026-10-01)
+
+### Features
+
+* **playwright:** take a partial webServer, the way the base merges it ([382ddca](https://github.com/Lautstark/toolchain/commit/382ddca1cdf5a5e56897e7069a92f84d4100d101))
+
 ## [4.0.0](https://github.com/Lautstark/toolchain/compare/v3.0.0...v4.0.0) (2026-10-01)
 
 ### ⚠ BREAKING CHANGES
