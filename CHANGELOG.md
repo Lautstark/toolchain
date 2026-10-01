@@ -1,3 +1,17 @@
+## [4.0.0](https://github.com/Lautstark/toolchain/compare/v3.0.0...v4.0.0) (2026-10-01)
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** vitest moves from 4 to 5. A suite that reads Node APIs
+must name "node" in its tsconfig types; vitest's own types no longer
+bring them in.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+
+### Features
+
+* **deps:** vitest 5 ([32b53b5](https://github.com/Lautstark/toolchain/commit/32b53b5a4c61515081674b8fdd7eca201280512f))
+
 ## [3.0.0](https://github.com/Lautstark/toolchain/compare/v2.0.0...v3.0.0) (2026-10-01)
 
 ### ⚠ BREAKING CHANGES
