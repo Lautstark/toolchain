@@ -1,3 +1,17 @@
+## [3.0.0](https://github.com/Lautstark/toolchain/compare/v2.0.0...v3.0.0) (2026-10-01)
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** typescript moves from 5.9 to 6. An app's own tsconfig may
+need rootDir named for an emitting build (TS5011), and lib.dom now declares
+the File System Access iterators.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+
+### Features
+
+* **deps:** TypeScript 6 ([09ad089](https://github.com/Lautstark/toolchain/commit/09ad0891f69692500d642614328664155bc7ddd2))
+
 ## [2.0.0](https://github.com/Lautstark/toolchain/compare/v1.0.0...v2.0.0) (2026-10-01)
 
 ### ⚠ BREAKING CHANGES
