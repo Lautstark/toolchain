@@ -9,7 +9,19 @@
 // The .json5 is spelled out on purpose: the //path/to/file syntax implies a
 // .json extension, so omitting it looks for a file that is not there and
 // Renovate stops before it does anything.
+//
+// A major is the exception that rule needs: Renovate writes it as fix(deps):
+// too, which would ship typescript 7 as a toolchain patch and let every app
+// merge it unattended. The trailer below makes semantic-release cut a major
+// instead, and the shared preset holds a major for a person in every app.
 {
   $schema: "https://docs.renovatebot.com/renovate-schema.json",
   extends: ["github>Lautstark/.github//renovate-shared.json5"],
+  packageRules: [
+    {
+      matchDepTypes: ["dependencies"],
+      matchUpdateTypes: ["major"],
+      commitBody: "BREAKING CHANGE: {{{depName}}} moves to {{{newMajor}}}.",
+    },
+  ],
 }
